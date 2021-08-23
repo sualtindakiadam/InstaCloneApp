@@ -85,14 +85,60 @@
                     <view key="view" contentMode="scaleToFill" id="APr-Lq-hSe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadImage" translatesAutoresizingMaskIntoConstraints="NO" id="Etz-Lj-aXN">
+                                <rect key="frame" x="20" y="136" width="374" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="C6x-UI-GqN"/>
+                                    <constraint firstAttribute="width" constant="374" id="H3Y-y1-dEQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="VcP-Oc-Rnd"/>
+                                    <constraint firstAttribute="height" constant="220" id="m5U-mf-xOR"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oL-6x-S21">
+                                <rect key="frame" x="20" y="394" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xk8-sy-nrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGS-HU-enn">
+                                <rect key="frame" x="108" y="473" width="198" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="j80-ck-1gH"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonClicked:" destination="oEc-ef-2GM" eventType="touchUpInside" id="YIa-4T-Y7j"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TMz-Be-4pG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Etz-Lj-aXN" firstAttribute="top" secondItem="TMz-Be-4pG" secondAttribute="top" constant="92" id="4EX-Gh-29r"/>
+                            <constraint firstItem="2oL-6x-S21" firstAttribute="top" secondItem="Etz-Lj-aXN" secondAttribute="bottom" constant="38" id="693-MP-XaZ"/>
+                            <constraint firstItem="dGS-HU-enn" firstAttribute="top" secondItem="2oL-6x-S21" secondAttribute="bottom" constant="45" id="OIl-pk-7q3"/>
+                            <constraint firstItem="Etz-Lj-aXN" firstAttribute="leading" secondItem="APr-Lq-hSe" secondAttribute="leadingMargin" id="QiP-Fx-HV1"/>
+                            <constraint firstItem="TMz-Be-4pG" firstAttribute="bottom" secondItem="dGS-HU-enn" secondAttribute="bottom" constant="249" id="Ss9-fc-6GK"/>
+                            <constraint firstItem="Etz-Lj-aXN" firstAttribute="leading" secondItem="2oL-6x-S21" secondAttribute="leading" id="ThT-gD-yhW"/>
+                            <constraint firstItem="dGS-HU-enn" firstAttribute="leading" secondItem="TMz-Be-4pG" secondAttribute="leading" constant="108" id="b0W-bi-Dd9"/>
+                            <constraint firstItem="Etz-Lj-aXN" firstAttribute="trailing" secondItem="2oL-6x-S21" secondAttribute="trailing" id="g88-PJ-Lvg"/>
+                            <constraint firstItem="2oL-6x-S21" firstAttribute="centerX" secondItem="dGS-HU-enn" secondAttribute="centerX" id="rEe-9c-UUm"/>
+                            <constraint firstItem="Etz-Lj-aXN" firstAttribute="trailing" secondItem="APr-Lq-hSe" secondAttribute="trailingMargin" id="sSM-rX-h2B"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="jb9-Ba-94o"/>
+                    <connections>
+                        <outlet property="commentText" destination="2oL-6x-S21" id="9tA-a6-Hek"/>
+                        <outlet property="iimageView" destination="Etz-Lj-aXN" id="DrP-O6-YEm"/>
+                        <outlet property="uploadButton" destination="dGS-HU-enn" id="bcu-pJ-ol3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uj-dY-ogP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="117"/>
+            <point key="canvasLocation" x="-449.27536231884062" y="116.51785714285714"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Nrv-Zp-19P">
@@ -146,7 +192,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gtE-OJ-YcR">
             <objects>
-                <tabBarController id="cf7-aq-qj2" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="cf7-aq-qj2" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UEq-Ar-Ifb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JD0-iz-neD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -168,6 +214,7 @@
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
         <image name="s.circle.fill" catalog="system" width="128" height="121"/>
         <image name="u.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="uploadImage" width="2286" height="2284"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
