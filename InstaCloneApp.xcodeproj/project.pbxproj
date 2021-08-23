@@ -11,6 +11,7 @@
 		9524170326D3B83200BF3F15 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524170226D3B83200BF3F15 /* FeedViewController.swift */; };
 		9524170526D3B84F00BF3F15 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524170426D3B84F00BF3F15 /* UploadViewController.swift */; };
 		9524170726D3B85E00BF3F15 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524170626D3B85E00BF3F15 /* SettingsViewController.swift */; };
+		9524170926D3E0B600BF3F15 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524170826D3E0B600BF3F15 /* FeedTableViewCell.swift */; };
 		95F242B126D38C9100744DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F242B026D38C9100744DDA /* AppDelegate.swift */; };
 		95F242B326D38C9100744DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F242B226D38C9100744DDA /* SceneDelegate.swift */; };
 		95F242B526D38C9100744DDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F242B426D38C9100744DDA /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		9524170226D3B83200BF3F15 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9524170426D3B84F00BF3F15 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9524170626D3B85E00BF3F15 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9524170826D3E0B600BF3F15 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		95F242AD26D38C9100744DDA /* InstaCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F242B026D38C9100744DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F242B226D38C9100744DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				9524170226D3B83200BF3F15 /* FeedViewController.swift */,
 				9524170426D3B84F00BF3F15 /* UploadViewController.swift */,
 				9524170626D3B85E00BF3F15 /* SettingsViewController.swift */,
+				9524170826D3E0B600BF3F15 /* FeedTableViewCell.swift */,
 				95F242B626D38C9100744DDA /* Main.storyboard */,
 				95F242B926D38C9200744DDA /* Assets.xcassets */,
 				95F242BB26D38C9200744DDA /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 			files = (
 				95F242B526D38C9100744DDA /* ViewController.swift in Sources */,
 				9524170526D3B84F00BF3F15 /* UploadViewController.swift in Sources */,
+				9524170926D3E0B600BF3F15 /* FeedTableViewCell.swift in Sources */,
 				95F242B126D38C9100744DDA /* AppDelegate.swift in Sources */,
 				9524170326D3B83200BF3F15 /* FeedViewController.swift in Sources */,
 				95F242B326D38C9100744DDA /* SceneDelegate.swift in Sources */,
