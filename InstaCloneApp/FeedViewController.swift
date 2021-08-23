@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -30,10 +31,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return userEmailArray.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedTableViewCell
         
-        cell.userImageView.image = UIImage(named: "uploadImage.png")
+        cell.userImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
         cell.userEmailLabel.text = userEmailArray[indexPath.row]
         cell.commentLabel.text = userCommentArray[indexPath.row]
         cell.likeLablem.text = String(likeArray[indexPath.row])
@@ -44,6 +46,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getDataFromFirestore(){
         
         
+        
         let fireStoreDAtabase = Firestore.firestore()
         
         /* tarihle ilgili eski versiyonsa bunları eklemek gerekebilir
@@ -52,12 +55,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         fireStoreDAtabase.settings = settings
         */
         
-        fireStoreDAtabase.collection("Post").addSnapshotListener { snapshot, error in
+        fireStoreDAtabase.collection("Post").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
             
             if error != nil {
                 print(error?.localizedDescription)
             }else{
                 if snapshot?.isEmpty != true && snapshot != nil{
+                    
+                    self.userImageArray.removeAll()
+                    self.userCommentArray.removeAll()
+                    self.userEmailArray.removeAll()
+                    self.likeArray.removeAll()
+                    
                     for document in snapshot!.documents{
                         let documentID = document.documentID
                         print("döküman id \(documentID)")
