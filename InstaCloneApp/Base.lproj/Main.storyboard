@@ -233,17 +233,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AB1-ZI-8ls">
+                                                    <rect key="frame" x="337" y="26" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="t7L-yt-2U0" firstAttribute="top" secondItem="XaR-u9-Wvg" secondAttribute="bottom" constant="8" id="1nW-0u-hSi"/>
                                                 <constraint firstItem="t7L-yt-2U0" firstAttribute="leading" secondItem="WsH-GO-R1w" secondAttribute="leading" constant="20" id="7GI-Oo-3VK"/>
                                                 <constraint firstItem="Jfv-Jz-22i" firstAttribute="top" secondItem="t7L-yt-2U0" secondAttribute="bottom" constant="93" id="9tJ-pX-NF1"/>
+                                                <constraint firstItem="AB1-ZI-8ls" firstAttribute="leading" secondItem="Jfv-Jz-22i" secondAttribute="leading" id="Pj6-RH-FQN"/>
                                                 <constraint firstItem="XaR-u9-Wvg" firstAttribute="centerX" secondItem="t7L-yt-2U0" secondAttribute="centerX" id="WRl-z7-Bcg"/>
                                                 <constraint firstItem="t7L-yt-2U0" firstAttribute="leading" secondItem="Evk-2X-42p" secondAttribute="leading" id="ZaA-hZ-jqP"/>
                                                 <constraint firstItem="Jfv-Jz-22i" firstAttribute="trailing" secondItem="WsH-GO-R1w" secondAttribute="trailingMargin" id="aaE-ur-KCZ"/>
                                                 <constraint firstItem="XaR-u9-Wvg" firstAttribute="top" secondItem="WsH-GO-R1w" secondAttribute="topMargin" constant="15" id="bL1-hS-BbW"/>
                                                 <constraint firstItem="OFm-FY-mvf" firstAttribute="top" secondItem="t7L-yt-2U0" secondAttribute="bottom" constant="8" id="gUC-W1-gr7"/>
                                                 <constraint firstAttribute="trailing" secondItem="t7L-yt-2U0" secondAttribute="trailing" constant="20" id="hfu-WR-HnL"/>
+                                                <constraint firstItem="AB1-ZI-8ls" firstAttribute="baseline" secondItem="XaR-u9-Wvg" secondAttribute="baseline" id="hqd-rJ-ijB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Evk-2X-42p" secondAttribute="bottom" constant="29" id="tXp-j1-Dx3"/>
                                                 <constraint firstItem="OFm-FY-mvf" firstAttribute="leading" secondItem="WsH-GO-R1w" secondAttribute="leadingMargin" id="tin-7B-9vT"/>
                                                 <constraint firstItem="Evk-2X-42p" firstAttribute="top" secondItem="OFm-FY-mvf" secondAttribute="bottom" constant="54.5" id="uDw-k6-CMz"/>
@@ -252,6 +260,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLabel" destination="OFm-FY-mvf" id="Xfs-vK-eMc"/>
+                                            <outlet property="documentIdLabel" destination="AB1-ZI-8ls" id="J2g-Nw-5Oo"/>
                                             <outlet property="likeLablem" destination="Jfv-Jz-22i" id="BVW-72-qul"/>
                                             <outlet property="userEmailLabel" destination="XaR-u9-Wvg" id="8eO-bT-AxN"/>
                                             <outlet property="userImageView" destination="t7L-yt-2U0" id="fBV-dv-TDI"/>
